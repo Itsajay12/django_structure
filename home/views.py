@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import*
 
 # Create your views here.
 from django.http import HttpResponse
@@ -12,4 +13,5 @@ def home1(request):
 # def home2(request):
 #   return HttpResponse("page 2")
 def home2(request):
-  return render(request,'index2.html')
+  query=student.objects.all()
+  return render(request,'index2.html',{'query':query})
