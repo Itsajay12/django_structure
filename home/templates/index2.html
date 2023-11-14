@@ -9,10 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    {%  for i in query%}
-    {{i.name}}
-    {{i.age}}
-    {% endfor%}
+    <table class="table container">
+        <thead>
+          <tr>
+           
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+            {%  for i in query%}
+          <tr>
+           
+            <td> {{i.name}}</td>
+            <td> {{i.age}}</td>
+          
+          </tr>
+          {% endfor%}
+          
+        </tbody>
+      </table>
+  
+   
+   
+   
  <h2>   this is h2</h2>
 </body>
 </html>

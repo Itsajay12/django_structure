@@ -15,3 +15,8 @@ def home1(request):
 def home2(request):
   query=student.objects.all()
   return render(request,'index2.html',{'query':query})
+
+def employee(request):
+  query=Employee.objects.all()
+  return render(request,'employee.html',{'query':query})
+  
