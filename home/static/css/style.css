@@ -1,6 +1,9 @@
 p{
-    background-color: chartreuse;
+    background-color: rgb(0, 38, 255);
 }
 h2{
-    color: aqua;
+    color: rgb(255, 81, 0);
+}
+.anchor{
+    text-decoration: none;
 }

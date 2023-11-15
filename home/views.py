@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import*
+from home.forms import*
 
 # Create your views here.
 from django.http import HttpResponse
@@ -19,4 +20,14 @@ def home2(request):
 def employee(request):
   query=Employee.objects.all()
   return render(request,'employee.html',{'query':query})
+
+
+def from1(request):
+  form=StudentForm()
+  if(request.method=='POST'):
+    form=StudentForm(request.POST)
+    if form.is_valid():
+      form.save()
+      return home2(request)
+  return render(request,'form.html',{'form':form})
   
