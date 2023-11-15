@@ -22,5 +22,6 @@ urlpatterns = [
     path('',home1,name="home"),
     path('pg2/',home2,name="pg2"),
     path('employee/',employee,name="employee"),
-    path('form/',from1,name="form")
+    path('form/',from1,name="form"),
+    path('form2/',form2,name="form2")
 ]

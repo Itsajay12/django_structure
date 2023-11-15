@@ -31,3 +31,11 @@ def from1(request):
       return home2(request)
   return render(request,'form.html',{'form':form})
   
+def form2(request):
+ form=EmployeeForm()
+ if(request.method=='POST'):
+   form=EmployeeForm(request.POST)
+   if form.is_valid():
+     form.save()
+     return employee(request)
+ return render(request,'from2.html',{'form':form})
